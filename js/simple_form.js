@@ -17,3 +17,15 @@ text.addEventListener('input', function () {
     }
 });
 
+const email = document.querySelector('#email');
+const emailError = document.querySelector('.email-error');
+email.addEventListener('input', function () 
+    {
+    if (EMAIL_PATTERN.test(email.value)) {
+        emailError.textContent = "";
+    }
+    else 
+    {
+        emailError.textContent = "Email is Incorrect";
+    }
+});
