@@ -42,3 +42,16 @@ telephoneNumber.addEventListener('input', function () {
         telephoneNumberError.textContent = "telephone number is Incorrect";
     }
 });
+
+const password = document.querySelector('#pwd');
+const passwordError = document.querySelector('.pwd-error');
+password.addEventListener('input', function () {
+    if (PASSWORD_PATERN.test(password.value)) 
+    {
+        passwordError.textContent = "";
+    }
+    else 
+    {
+        passwordError.textContent = "Password is Incorrect";
+    }
+});
